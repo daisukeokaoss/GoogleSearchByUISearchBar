@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>72985975-53D5-4EB0-83F9-B3977114C147</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Example9</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>632781DF-7B45-4D1A-90F9-5DEB9DEB1F39</key>
+		<string>ssh://github.com/Daisukedayon/GoogleSearchByUISearchBar.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Example9/Example9.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>632781DF-7B45-4D1A-90F9-5DEB9DEB1F39</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/Daisukedayon/GoogleSearchByUISearchBar.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>632781DF-7B45-4D1A-90F9-5DEB9DEB1F39</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>632781DF-7B45-4D1A-90F9-5DEB9DEB1F39</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GoogleSearchByUISearchBar</string>
+		</dict>
+	</array>
+</dict>
+</plist>
