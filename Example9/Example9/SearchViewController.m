@@ -26,6 +26,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.googlesite = defaultGoogle;
     }
     return self;
 }
@@ -45,8 +46,14 @@
     
     NSString *query  = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)self.SearchString, NULL, CFSTR (";,/?:@&=+$#"), kCFStringEncodingUTF8);
     
-    
-    NSString *url = [NSString stringWithFormat:@"http://www.google.co.jp/m/search?q=%@",query];
+    NSString *url;
+    if(self.googlesite == JapaneseGoogle){
+          url = [NSString stringWithFormat:@"http://www.google.co.jp/m/search?q=%@",query];
+    }else if(self.googlesite == AmericanGoogle){
+        url = [NSString stringWithFormat:@"http://www.google.com/m/search?q=%@",query];
+    }else{
+        url = [NSString stringWithFormat:@"http://www.google.co.jp/m/search?q=%@",query];
+    }
     NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [webView loadRequest:request];
     

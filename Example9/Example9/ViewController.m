@@ -37,12 +37,25 @@
     if([searchBar.text isEqual: @""]){
         return;
     }
+    CountryOfGoogleSite site;
+    if([self.myPickerView selectedRowInComponent:0] == 0){
+        //日本のGoogleが選択されている
+        site = JapaneseGoogle;
+    }else if([self.myPickerView selectedRowInComponent:0] == 1){
+        //アメリカのGoogleが選択されている。
+        site = AmericanGoogle;
+    }else{
+        site = JapaneseGoogle;
+    }
     
     SearchViewController* ViewController = [[SearchViewController alloc] init];
+    ViewController.googlesite = site;
     ViewController.SearchString = searchBar.text;
     ViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     //アニメーションを有効にしてビューを表示します。
     [self presentViewController: ViewController animated:YES completion: nil];
+    
+
 }
 
 -(NSString*)pickerView:(UIPickerView*)pickerView

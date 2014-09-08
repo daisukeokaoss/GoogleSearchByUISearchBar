@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
+typedef NS_ENUM (NSUInteger, CountryOfGoogleSite) {
+    JapaneseGoogle,
+    AmericanGoogle,
+    defaultGoogle
+};
+
 @interface SearchViewController : UIViewController
 @property (nonatomic,strong) NSString *SearchString;
+@property (nonatomic) CountryOfGoogleSite googlesite;
 
 @end
