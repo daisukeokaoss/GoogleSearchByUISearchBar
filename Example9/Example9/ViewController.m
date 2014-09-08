@@ -11,6 +11,7 @@
 #import "SearchViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIPickerView *myPickerView;
 
 @end
 
@@ -21,7 +22,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    
+    self.myPickerView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,6 +43,28 @@
     ViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     //アニメーションを有効にしてビューを表示します。
     [self presentViewController: ViewController animated:YES completion: nil];
+}
+
+-(NSString*)pickerView:(UIPickerView*)pickerView
+           titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
+    // 行インデックス番号を返す
+    //return [NSString stringWithFormat:@"%d", row];
+    if(row == 0){
+        return @"日本のGoogle";
+    }else if(row ==1){
+        return @"American Google";
+    }
+    return @"";
+}
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return 2;
+}
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView*)pickerView{
+    return 1; //列数は２つ
 }
 
 @end

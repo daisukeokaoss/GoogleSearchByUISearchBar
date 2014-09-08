@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UISearchBarDelegate>
+@interface ViewController : UIViewController <UISearchBarDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 
 @end
